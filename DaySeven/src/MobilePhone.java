@@ -4,26 +4,26 @@
  * can print last 10 called numbers.
  */
 public class MobilePhone extends OldPhone{
-    private final String[] lastNumbers = new String[10];
+    private final int maxNumSaved = 10;
+    private final String[] lastNumbers = new String[maxNumSaved];
 
 
+    /**
+     * keeps track of numbers for @printLastNumbers
+     * @param number the phone number to call
+     */
     @Override
     public void call(String number) {
         super.call(number);
-        boolean numberAdded = false;
-        for(int i = 0; i < 10; i++){
-            if (lastNumbers[i] == null){
-                lastNumbers[i] = number;
-                numberAdded = true;
-            }
+        String movedNumber;
+        String savedNumber = lastNumbers[0];
 
+        for (int i = 1; i < maxNumSaved; i++) {
+            movedNumber = lastNumbers[i];
+            lastNumbers[i] = savedNumber;
+            savedNumber = movedNumber;
         }
-        if(!numberAdded){
-            for(int i = 0; i < 9; i++) {
-                lastNumbers[i] = lastNumbers[i++];
-            }
-            lastNumbers[0] = number;
-        }
+        lastNumbers[0] = number;
     }
 
     public void ringAlarm(String alarm){
