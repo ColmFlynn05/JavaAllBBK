@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DayFive/DayFive.iml" filepath="$PROJECT_DIR$/DayFive/DayFive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DaySeven/DaySeven.iml" filepath="$PROJECT_DIR$/DaySeven/DaySeven.iml" />
       <module fileurl="file://$PROJECT_DIR$/DaySix/DaySix.iml" filepath="$PROJECT_DIR$/DaySix/DaySix.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaAllBBK.iml" filepath="$PROJECT_DIR$/.idea/JavaAllBBK.iml" />
     </modules>
